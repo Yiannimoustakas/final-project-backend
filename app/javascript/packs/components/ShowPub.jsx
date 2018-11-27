@@ -5,6 +5,7 @@ import Order from './Order'
 import axios from 'axios';
 import Geocode from "react-geocode";
 
+const ORDER_URL = 'http://localhost:3000/orders/new'
 
 class ShowPub extends Component {
   constructor(){
@@ -34,6 +35,11 @@ class ShowPub extends Component {
     const utterThat = new SpeechSynthesisUtterance(`You haven't ordered anything. Please select a beverage before submitting.`)
     {this.state.order.length === 0 ? synth.speak(utterThat) :
     synth.speak(utterThis)}
+    axios.post(ORDER_URL, this.state.pub.id, this.state.pub.drinks)
+    .then(response => {
+
+    })
+    .catch(console.warn)
   }
 
   resetOrder = () => {

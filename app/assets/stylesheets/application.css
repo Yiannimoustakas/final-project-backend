@@ -17,10 +17,14 @@
 .sign__in__message{
   left: 50%;
   top: 5vh;
+  padding: 10px;
   background-color: rgb(224, 184, 62);
   color: #484848;
   position: absolute;
   display: inline-block;
   font-size: 20px;
   font-weight: bold;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 6px 6px 0px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
 }

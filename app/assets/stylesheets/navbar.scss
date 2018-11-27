@@ -143,6 +143,7 @@ a:hover
   color: #484848;
   position: absolute;
   width: 300px;
+  height: 100vh;
   margin: -100px 0 0 -50px;
   padding: 50px;
   padding-top: 125px;
@@ -152,9 +153,9 @@ a:hover
   -webkit-font-smoothing: antialiased;
   /* to stop flickering of text in safari */
 
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px 0px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 3px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 8px 6px 0px;
+  border-bottom: 4px solid rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
   justify-content: space-evenly;
 
   transform-origin: 0% 0%;
@@ -167,6 +168,9 @@ a:hover
 {
   padding: 10px 0;
   font-size: 22px;
+  box-shadow: rgba(0, 0, 0, 0.1) 4px 8px 6px 0px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
 }
 
 /*

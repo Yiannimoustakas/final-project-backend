@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root "users#index"
+  root "session#new"
   resources :orders
   resources :drinks
 
@@ -13,5 +13,5 @@ Rails.application.routes.draw do
   get "/login" => "session#new"
   post "/login" => "session#create"
   delete "/login" => "session#destroy"
-  
+
 end

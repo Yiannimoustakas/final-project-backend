@@ -48752,3 +48752,939 @@ Processing by SessionController#new as HTML
 Completed 200 OK in 478ms (Views: 436.7ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/pubs/search/moe" for 127.0.0.1 at 2018-11-27 21:50:13 +1100
+Processing by PubsController#search as HTML
+  Parameters: {"query"=>"moe"}
+  [1m[36mPub Load (47.5ms)[0m  [1m[34mSELECT "pubs".* FROM "pubs" WHERE (name || location ILIKE '%moe%')[0m
+  ↳ app/controllers/pubs_controller.rb:19
+Completed 200 OK in 87ms (Views: 20.8ms | ActiveRecord: 47.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-27 21:50:18 +1100
+Processing by UsersController#index as HTML
+Completed 406 Not Acceptable in 129ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::UnknownFormat (UsersController#index is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []):
+  
+actionpack (5.2.1) lib/action_controller/metal/implicit_render.rb:42:in `default_render'
+actionpack (5.2.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.1) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.1) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.1) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.1) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.1) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.1) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.1) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.1) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.1) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.6) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+actionpack (5.2.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+webpacker (3.5.5) lib/webpacker/dev_server_proxy.rb:22:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/app" for 127.0.0.1 at 2018-11-27 21:50:33 +1100
+Processing by PagesController#app as HTML
+Redirected to http://localhost:3000/login
+Completed 302 Found in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-11-27 21:50:33 +1100
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 150ms (Views: 143.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-11-27 21:50:55 +1100
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (15.1ms)
+Completed 200 OK in 268ms (Views: 251.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-11-27 21:51:06 +1100
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 126ms (Views: 119.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-11-27 21:51:26 +1100
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (14.6ms)
+Completed 200 OK in 258ms (Views: 240.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-27 21:51:32 +1100
+Processing by UsersController#index as HTML
+Completed 406 Not Acceptable in 140ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::UnknownFormat (UsersController#index is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []):
+  
+actionpack (5.2.1) lib/action_controller/metal/implicit_render.rb:42:in `default_render'
+actionpack (5.2.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.1) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.1) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.1) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.1) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.1) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.1) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.1) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.1) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.1) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.6) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+actionpack (5.2.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+webpacker (3.5.5) lib/webpacker/dev_server_proxy.rb:22:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-11-27 21:52:00 +1100
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 91ms (Views: 84.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-11-27 21:53:14 +1100
+Processing by SessionController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2CETWuCyrKuWRNZ7woheVkzm6FgyEFETyuMkY1OcCMuHBoCk/gzdO9OckTg+fFopj42vxqy8WI87a4px9rZUGA==", "email"=>"linna@ga.co", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "linna@ga.co"], ["LIMIT", 1]]
+  ↳ app/controllers/session_controller.rb:6
+Redirected to http://localhost:3000/app
+Completed 302 Found in 214ms (ActiveRecord: 103.4ms)
+
+
+Started GET "/app" for 127.0.0.1 at 2018-11-27 21:53:14 +1100
+Processing by PagesController#app as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  Rendering pages/app.html.erb within layouts/application
+  Rendered pages/app.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 85ms (Views: 77.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/rails/info/routes" for 127.0.0.1 at 2018-11-27 22:10:33 +1100
+Processing by Rails::InfoController#routes as HTML
+  Rendering /Users/yiannimoustakas/.rvm/gems/ruby-2.5.1/gems/railties-5.2.1/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /Users/yiannimoustakas/.rvm/gems/ruby-2.5.1/gems/actionpack-5.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [43 times] (349.3ms)
+  Rendered /Users/yiannimoustakas/.rvm/gems/ruby-2.5.1/gems/actionpack-5.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (13.3ms)
+  Rendered /Users/yiannimoustakas/.rvm/gems/ruby-2.5.1/gems/railties-5.2.1/lib/rails/templates/rails/info/routes.html.erb within layouts/application (436.7ms)
+Completed 200 OK in 506ms (Views: 465.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/app" for 127.0.0.1 at 2018-11-27 22:14:19 +1100
+Processing by PagesController#app as HTML
+  [1m[36mUser Load (52.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  Rendering pages/app.html.erb within layouts/application
+  Rendered pages/app.html.erb within layouts/application (27.7ms)
+Completed 200 OK in 279ms (Views: 195.4ms | ActiveRecord: 52.3ms)
+
+
+Started GET "/app" for 127.0.0.1 at 2018-11-27 22:14:23 +1100
+Processing by PagesController#app as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  Rendering pages/app.html.erb within layouts/application
+  Rendered pages/app.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 99ms (Views: 90.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/app" for 127.0.0.1 at 2018-11-27 22:14:46 +1100
+Processing by PagesController#app as HTML
+  [1m[36mUser Load (24.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  Rendering pages/app.html.erb within layouts/application
+  Rendered pages/app.html.erb within layouts/application (32.8ms)
+Completed 200 OK in 248ms (Views: 205.4ms | ActiveRecord: 24.6ms)
+
+
+Started GET "/pubs/search/marr.json" for 127.0.0.1 at 2018-11-27 22:14:51 +1100
+Processing by PubsController#search as JSON
+  Parameters: {"query"=>"marr"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mPub Load (50.0ms)[0m  [1m[34mSELECT "pubs".* FROM "pubs" WHERE (name || location ILIKE '%marr%')[0m
+  ↳ app/controllers/pubs_controller.rb:19
+Completed 200 OK in 192ms (Views: 32.3ms | ActiveRecord: 132.5ms)
+
+
+Started GET "/pub/29.json" for 127.0.0.1 at 2018-11-27 22:14:52 +1100
+Processing by PubsController#show as JSON
+  Parameters: {"id"=>"29"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mPub Load (0.6ms)[0m  [1m[34mSELECT  "pubs".* FROM "pubs" WHERE "pubs"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/pubs_controller.rb:74
+  [1m[36mCACHE Pub Load (0.1ms)[0m  [1m[34mSELECT  "pubs".* FROM "pubs" WHERE "pubs"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/pubs_controller.rb:14
+  [1m[36mDrink Load (125.9ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks" WHERE "drinks"."pub_id" = $1[0m  [["pub_id", 29]]
+  ↳ app/controllers/pubs_controller.rb:15
+Completed 200 OK in 359ms (Views: 156.6ms | ActiveRecord: 146.5ms)
+
+
+Started GET "/pubs/search/marr.json" for 127.0.0.1 at 2018-11-27 22:14:56 +1100
+Processing by PubsController#search as JSON
+  Parameters: {"query"=>"marr"}
+  [1m[36mUser Load (15.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mPub Load (9.6ms)[0m  [1m[34mSELECT "pubs".* FROM "pubs" WHERE (name || location ILIKE '%marr%')[0m
+  ↳ app/controllers/pubs_controller.rb:19
+Completed 200 OK in 32ms (Views: 2.5ms | ActiveRecord: 25.3ms)
+
+
+Started GET "/pubs/search/marr.json" for 127.0.0.1 at 2018-11-27 22:15:01 +1100
+Processing by PubsController#search as JSON
+  Parameters: {"query"=>"marr"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mPub Load (1.4ms)[0m  [1m[34mSELECT "pubs".* FROM "pubs" WHERE (name || location ILIKE '%marr%')[0m
+  ↳ app/controllers/pubs_controller.rb:19
+Completed 200 OK in 8ms (Views: 2.7ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/pubs/search/marr.json" for 127.0.0.1 at 2018-11-27 22:15:06 +1100
+Processing by PubsController#search as JSON
+  Parameters: {"query"=>"marr"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mPub Load (1.1ms)[0m  [1m[34mSELECT "pubs".* FROM "pubs" WHERE (name || location ILIKE '%marr%')[0m
+  ↳ app/controllers/pubs_controller.rb:19
+Completed 200 OK in 8ms (Views: 2.4ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/pubs/search/marr.json" for 127.0.0.1 at 2018-11-27 22:15:11 +1100
+Processing by PubsController#search as JSON
+  Parameters: {"query"=>"marr"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mPub Load (0.5ms)[0m  [1m[34mSELECT "pubs".* FROM "pubs" WHERE (name || location ILIKE '%marr%')[0m
+  ↳ app/controllers/pubs_controller.rb:19
+Completed 200 OK in 5ms (Views: 1.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/pubs/search/marr.json" for 127.0.0.1 at 2018-11-27 22:15:16 +1100
+Processing by PubsController#search as JSON
+  Parameters: {"query"=>"marr"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mPub Load (0.6ms)[0m  [1m[34mSELECT "pubs".* FROM "pubs" WHERE (name || location ILIKE '%marr%')[0m
+  ↳ app/controllers/pubs_controller.rb:19
+Completed 200 OK in 8ms (Views: 1.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/pubs/search/marr.json" for 127.0.0.1 at 2018-11-27 22:15:21 +1100
+Processing by PubsController#search as JSON
+  Parameters: {"query"=>"marr"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mPub Load (0.5ms)[0m  [1m[34mSELECT "pubs".* FROM "pubs" WHERE (name || location ILIKE '%marr%')[0m
+  ↳ app/controllers/pubs_controller.rb:19
+Completed 200 OK in 6ms (Views: 2.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/pubs/search/marr.json" for 127.0.0.1 at 2018-11-27 22:15:26 +1100
+Processing by PubsController#search as JSON
+  Parameters: {"query"=>"marr"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mPub Load (0.6ms)[0m  [1m[34mSELECT "pubs".* FROM "pubs" WHERE (name || location ILIKE '%marr%')[0m
+  ↳ app/controllers/pubs_controller.rb:19
+Completed 200 OK in 7ms (Views: 2.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/pubs/search/marr.json" for 127.0.0.1 at 2018-11-27 22:15:31 +1100
+Processing by PubsController#search as JSON
+  Parameters: {"query"=>"marr"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mPub Load (0.5ms)[0m  [1m[34mSELECT "pubs".* FROM "pubs" WHERE (name || location ILIKE '%marr%')[0m
+  ↳ app/controllers/pubs_controller.rb:19
+Completed 200 OK in 6ms (Views: 3.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/pubs/search/marr.json" for 127.0.0.1 at 2018-11-27 22:15:36 +1100
+Processing by PubsController#search as JSON
+  Parameters: {"query"=>"marr"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mPub Load (0.5ms)[0m  [1m[34mSELECT "pubs".* FROM "pubs" WHERE (name || location ILIKE '%marr%')[0m
+  ↳ app/controllers/pubs_controller.rb:19
+Completed 200 OK in 7ms (Views: 1.7ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/pubs/search/marr.json" for 127.0.0.1 at 2018-11-27 22:15:41 +1100
+Processing by PubsController#search as JSON
+  Parameters: {"query"=>"marr"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mPub Load (0.5ms)[0m  [1m[34mSELECT "pubs".* FROM "pubs" WHERE (name || location ILIKE '%marr%')[0m
+  ↳ app/controllers/pubs_controller.rb:19
+Completed 200 OK in 5ms (Views: 1.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/pubs/search/marr.json" for 127.0.0.1 at 2018-11-27 22:15:46 +1100
+Processing by PubsController#search as JSON
+  Parameters: {"query"=>"marr"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mPub Load (0.6ms)[0m  [1m[34mSELECT "pubs".* FROM "pubs" WHERE (name || location ILIKE '%marr%')[0m
+  ↳ app/controllers/pubs_controller.rb:19
+Completed 200 OK in 6ms (Views: 1.9ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/pubs/search/marr.json" for 127.0.0.1 at 2018-11-27 22:15:51 +1100
+Processing by PubsController#search as JSON
+  Parameters: {"query"=>"marr"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mPub Load (0.6ms)[0m  [1m[34mSELECT "pubs".* FROM "pubs" WHERE (name || location ILIKE '%marr%')[0m
+  ↳ app/controllers/pubs_controller.rb:19
+Completed 200 OK in 7ms (Views: 2.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/pubs/search/marr.json" for 127.0.0.1 at 2018-11-27 22:15:56 +1100
+Processing by PubsController#search as JSON
+  Parameters: {"query"=>"marr"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mPub Load (0.6ms)[0m  [1m[34mSELECT "pubs".* FROM "pubs" WHERE (name || location ILIKE '%marr%')[0m
+  ↳ app/controllers/pubs_controller.rb:19
+Completed 200 OK in 10ms (Views: 5.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/pubs/search/marr.json" for 127.0.0.1 at 2018-11-27 22:16:01 +1100
+Processing by PubsController#search as JSON
+  Parameters: {"query"=>"marr"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mPub Load (0.7ms)[0m  [1m[34mSELECT "pubs".* FROM "pubs" WHERE (name || location ILIKE '%marr%')[0m
+  ↳ app/controllers/pubs_controller.rb:19
+Completed 200 OK in 11ms (Views: 5.3ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/pubs/search/marr.json" for 127.0.0.1 at 2018-11-27 22:16:06 +1100
+Processing by PubsController#search as JSON
+  Parameters: {"query"=>"marr"}
+  [1m[36mUser Load (29.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mPub Load (15.8ms)[0m  [1m[34mSELECT "pubs".* FROM "pubs" WHERE (name || location ILIKE '%marr%')[0m
+  ↳ app/controllers/pubs_controller.rb:19
+Completed 200 OK in 56ms (Views: 5.5ms | ActiveRecord: 45.6ms)
+
+
+Started GET "/pubs/search/marr.json" for 127.0.0.1 at 2018-11-27 22:16:11 +1100
+Processing by PubsController#search as JSON
+  Parameters: {"query"=>"marr"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mPub Load (1.8ms)[0m  [1m[34mSELECT "pubs".* FROM "pubs" WHERE (name || location ILIKE '%marr%')[0m
+  ↳ app/controllers/pubs_controller.rb:19
+Completed 200 OK in 14ms (Views: 5.0ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/pubs/search/marr.json" for 127.0.0.1 at 2018-11-27 22:16:16 +1100
+Processing by PubsController#search as JSON
+  Parameters: {"query"=>"marr"}
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mPub Load (1.0ms)[0m  [1m[34mSELECT "pubs".* FROM "pubs" WHERE (name || location ILIKE '%marr%')[0m
+  ↳ app/controllers/pubs_controller.rb:19
+Completed 200 OK in 14ms (Views: 3.7ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/pubs/search/marr.json" for 127.0.0.1 at 2018-11-27 22:16:21 +1100
+Processing by PubsController#search as JSON
+  Parameters: {"query"=>"marr"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mPub Load (1.3ms)[0m  [1m[34mSELECT "pubs".* FROM "pubs" WHERE (name || location ILIKE '%marr%')[0m
+  ↳ app/controllers/pubs_controller.rb:19
+Completed 200 OK in 14ms (Views: 6.1ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/app" for 127.0.0.1 at 2018-11-27 22:16:24 +1100
+Processing by PagesController#app as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  Rendering pages/app.html.erb within layouts/application
+  Rendered pages/app.html.erb within layouts/application (27.3ms)
+Completed 200 OK in 207ms (Views: 192.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/pub/29.json" for 127.0.0.1 at 2018-11-27 22:16:25 +1100
+Processing by PubsController#show as JSON
+  Parameters: {"id"=>"29"}
+  [1m[36mUser Load (45.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mPub Load (54.7ms)[0m  [1m[34mSELECT  "pubs".* FROM "pubs" WHERE "pubs"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/pubs_controller.rb:74
+  [1m[36mCACHE Pub Load (0.0ms)[0m  [1m[34mSELECT  "pubs".* FROM "pubs" WHERE "pubs"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/pubs_controller.rb:14
+  [1m[36mDrink Load (32.2ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks" WHERE "drinks"."pub_id" = $1[0m  [["pub_id", 29]]
+  ↳ app/controllers/pubs_controller.rb:15
+Completed 200 OK in 151ms (Views: 9.3ms | ActiveRecord: 132.6ms)
+
+
+Started GET "/app" for 127.0.0.1 at 2018-11-27 22:16:29 +1100
+Processing by PagesController#app as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  Rendering pages/app.html.erb within layouts/application
+  Rendered pages/app.html.erb within layouts/application (25.9ms)
+Completed 200 OK in 147ms (Views: 129.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/pub/29.json" for 127.0.0.1 at 2018-11-27 22:16:30 +1100
+Processing by PubsController#show as JSON
+  Parameters: {"id"=>"29"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mPub Load (0.8ms)[0m  [1m[34mSELECT  "pubs".* FROM "pubs" WHERE "pubs"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/pubs_controller.rb:74
+  [1m[36mCACHE Pub Load (0.0ms)[0m  [1m[34mSELECT  "pubs".* FROM "pubs" WHERE "pubs"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/pubs_controller.rb:14
+  [1m[36mDrink Load (0.7ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks" WHERE "drinks"."pub_id" = $1[0m  [["pub_id", 29]]
+  ↳ app/controllers/pubs_controller.rb:15
+Completed 200 OK in 14ms (Views: 6.9ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/app" for 127.0.0.1 at 2018-11-27 22:17:02 +1100
+Processing by PagesController#app as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  Rendering pages/app.html.erb within layouts/application
+  Rendered pages/app.html.erb within layouts/application (34.6ms)
+Completed 200 OK in 197ms (Views: 183.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/pub/29.json" for 127.0.0.1 at 2018-11-27 22:17:03 +1100
+Processing by PubsController#show as JSON
+  Parameters: {"id"=>"29"}
+  [1m[36mUser Load (32.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mPub Load (145.1ms)[0m  [1m[34mSELECT  "pubs".* FROM "pubs" WHERE "pubs"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/pubs_controller.rb:74
+  [1m[36mCACHE Pub Load (0.0ms)[0m  [1m[34mSELECT  "pubs".* FROM "pubs" WHERE "pubs"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/pubs_controller.rb:14
+  [1m[36mDrink Load (81.1ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks" WHERE "drinks"."pub_id" = $1[0m  [["pub_id", 29]]
+  ↳ app/controllers/pubs_controller.rb:15
+Completed 200 OK in 274ms (Views: 8.6ms | ActiveRecord: 258.9ms)
+
+
+Started GET "/app" for 127.0.0.1 at 2018-11-27 22:26:40 +1100
+Processing by PagesController#app as HTML
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  Rendering pages/app.html.erb within layouts/application
+  Rendered pages/app.html.erb within layouts/application (36.2ms)
+Completed 200 OK in 249ms (Views: 209.9ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/pub/29.json" for 127.0.0.1 at 2018-11-27 22:26:41 +1100
+Processing by PubsController#show as JSON
+  Parameters: {"id"=>"29"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mPub Load (3.2ms)[0m  [1m[34mSELECT  "pubs".* FROM "pubs" WHERE "pubs"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/pubs_controller.rb:74
+  [1m[36mCACHE Pub Load (0.0ms)[0m  [1m[34mSELECT  "pubs".* FROM "pubs" WHERE "pubs"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/pubs_controller.rb:14
+  [1m[36mDrink Load (7.3ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks" WHERE "drinks"."pub_id" = $1[0m  [["pub_id", 29]]
+  ↳ app/controllers/pubs_controller.rb:15
+Completed 200 OK in 39ms (Views: 18.2ms | ActiveRecord: 11.5ms)
+
+
+Started GET "/app" for 127.0.0.1 at 2018-11-27 22:29:03 +1100
+Processing by PagesController#app as HTML
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  Rendering pages/app.html.erb within layouts/application
+  Rendered pages/app.html.erb within layouts/application (35.2ms)
+Completed 200 OK in 874ms (Views: 841.1ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/pub/29.json" for 127.0.0.1 at 2018-11-27 22:29:05 +1100
+Processing by PubsController#show as JSON
+  Parameters: {"id"=>"29"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mPub Load (0.9ms)[0m  [1m[34mSELECT  "pubs".* FROM "pubs" WHERE "pubs"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/pubs_controller.rb:74
+  [1m[36mCACHE Pub Load (0.0ms)[0m  [1m[34mSELECT  "pubs".* FROM "pubs" WHERE "pubs"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/pubs_controller.rb:14
+  [1m[36mDrink Load (3.1ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks" WHERE "drinks"."pub_id" = $1[0m  [["pub_id", 29]]
+  ↳ app/controllers/pubs_controller.rb:15
+Completed 200 OK in 18ms (Views: 7.9ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/app" for 127.0.0.1 at 2018-11-27 22:29:22 +1100
+Processing by PagesController#app as HTML
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  Rendering pages/app.html.erb within layouts/application
+  Rendered pages/app.html.erb within layouts/application (27.3ms)
+Completed 200 OK in 304ms (Views: 278.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/pub/29.json" for 127.0.0.1 at 2018-11-27 22:29:23 +1100
+Processing by PubsController#show as JSON
+  Parameters: {"id"=>"29"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mPub Load (1.9ms)[0m  [1m[34mSELECT  "pubs".* FROM "pubs" WHERE "pubs"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/pubs_controller.rb:74
+  [1m[36mCACHE Pub Load (0.0ms)[0m  [1m[34mSELECT  "pubs".* FROM "pubs" WHERE "pubs"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/pubs_controller.rb:14
+  [1m[36mDrink Load (0.9ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks" WHERE "drinks"."pub_id" = $1[0m  [["pub_id", 29]]
+  ↳ app/controllers/pubs_controller.rb:15
+Completed 200 OK in 14ms (Views: 4.7ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/app" for 127.0.0.1 at 2018-11-27 22:29:45 +1100
+Processing by PagesController#app as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  Rendering pages/app.html.erb within layouts/application
+  Rendered pages/app.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 221ms (Views: 212.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/pub/29.json" for 127.0.0.1 at 2018-11-27 22:29:45 +1100
+Processing by PubsController#show as JSON
+  Parameters: {"id"=>"29"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mPub Load (0.8ms)[0m  [1m[34mSELECT  "pubs".* FROM "pubs" WHERE "pubs"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/pubs_controller.rb:74
+  [1m[36mCACHE Pub Load (0.0ms)[0m  [1m[34mSELECT  "pubs".* FROM "pubs" WHERE "pubs"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/pubs_controller.rb:14
+  [1m[36mDrink Load (1.1ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks" WHERE "drinks"."pub_id" = $1[0m  [["pub_id", 29]]
+  ↳ app/controllers/pubs_controller.rb:15
+Completed 200 OK in 17ms (Views: 9.1ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/app" for 127.0.0.1 at 2018-11-27 22:30:00 +1100
+Processing by PagesController#app as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  Rendering pages/app.html.erb within layouts/application
+  Rendered pages/app.html.erb within layouts/application (12.3ms)
+Completed 200 OK in 223ms (Views: 215.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/pub/29.json" for 127.0.0.1 at 2018-11-27 22:30:00 +1100
+Processing by PubsController#show as JSON
+  Parameters: {"id"=>"29"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mPub Load (1.3ms)[0m  [1m[34mSELECT  "pubs".* FROM "pubs" WHERE "pubs"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/pubs_controller.rb:74
+  [1m[36mCACHE Pub Load (0.0ms)[0m  [1m[34mSELECT  "pubs".* FROM "pubs" WHERE "pubs"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/pubs_controller.rb:14
+  [1m[36mDrink Load (1.0ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks" WHERE "drinks"."pub_id" = $1[0m  [["pub_id", 29]]
+  ↳ app/controllers/pubs_controller.rb:15
+Completed 200 OK in 19ms (Views: 8.9ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/app" for 127.0.0.1 at 2018-11-27 22:30:22 +1100
+Processing by PagesController#app as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  Rendering pages/app.html.erb within layouts/application
+  Rendered pages/app.html.erb within layouts/application (14.5ms)
+Completed 200 OK in 325ms (Views: 315.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/pub/29.json" for 127.0.0.1 at 2018-11-27 22:30:23 +1100
+Processing by PubsController#show as JSON
+  Parameters: {"id"=>"29"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mPub Load (0.9ms)[0m  [1m[34mSELECT  "pubs".* FROM "pubs" WHERE "pubs"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/pubs_controller.rb:74
+  [1m[36mCACHE Pub Load (0.0ms)[0m  [1m[34mSELECT  "pubs".* FROM "pubs" WHERE "pubs"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/pubs_controller.rb:14
+  [1m[36mDrink Load (0.8ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks" WHERE "drinks"."pub_id" = $1[0m  [["pub_id", 29]]
+  ↳ app/controllers/pubs_controller.rb:15
+Completed 200 OK in 17ms (Views: 4.8ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/app" for 127.0.0.1 at 2018-11-27 22:30:42 +1100
+Processing by PagesController#app as HTML
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  Rendering pages/app.html.erb within layouts/application
+  Rendered pages/app.html.erb within layouts/application (27.6ms)
+Completed 200 OK in 305ms (Views: 279.3ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/pub/29.json" for 127.0.0.1 at 2018-11-27 22:30:42 +1100
+Processing by PubsController#show as JSON
+  Parameters: {"id"=>"29"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mPub Load (0.9ms)[0m  [1m[34mSELECT  "pubs".* FROM "pubs" WHERE "pubs"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/pubs_controller.rb:74
+  [1m[36mCACHE Pub Load (0.0ms)[0m  [1m[34mSELECT  "pubs".* FROM "pubs" WHERE "pubs"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/pubs_controller.rb:14
+  [1m[36mDrink Load (1.4ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks" WHERE "drinks"."pub_id" = $1[0m  [["pub_id", 29]]
+  ↳ app/controllers/pubs_controller.rb:15
+Completed 200 OK in 15ms (Views: 5.3ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/app" for 127.0.0.1 at 2018-11-27 22:31:03 +1100
+Processing by PagesController#app as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  Rendering pages/app.html.erb within layouts/application
+  Rendered pages/app.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 238ms (Views: 228.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/pub/29.json" for 127.0.0.1 at 2018-11-27 22:31:03 +1100
+Processing by PubsController#show as JSON
+  Parameters: {"id"=>"29"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mPub Load (0.7ms)[0m  [1m[34mSELECT  "pubs".* FROM "pubs" WHERE "pubs"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/pubs_controller.rb:74
+  [1m[36mCACHE Pub Load (0.0ms)[0m  [1m[34mSELECT  "pubs".* FROM "pubs" WHERE "pubs"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/pubs_controller.rb:14
+  [1m[36mDrink Load (1.0ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks" WHERE "drinks"."pub_id" = $1[0m  [["pub_id", 29]]
+  ↳ app/controllers/pubs_controller.rb:15
+Completed 200 OK in 15ms (Views: 6.9ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/app" for 127.0.0.1 at 2018-11-27 22:31:39 +1100
+Processing by PagesController#app as HTML
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  Rendering pages/app.html.erb within layouts/application
+  Rendered pages/app.html.erb within layouts/application (14.7ms)
+Completed 200 OK in 259ms (Views: 247.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/pub/29.json" for 127.0.0.1 at 2018-11-27 22:31:40 +1100
+Processing by PubsController#show as JSON
+  Parameters: {"id"=>"29"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mPub Load (0.8ms)[0m  [1m[34mSELECT  "pubs".* FROM "pubs" WHERE "pubs"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/pubs_controller.rb:74
+  [1m[36mCACHE Pub Load (0.0ms)[0m  [1m[34mSELECT  "pubs".* FROM "pubs" WHERE "pubs"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/pubs_controller.rb:14
+  [1m[36mDrink Load (13.9ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks" WHERE "drinks"."pub_id" = $1[0m  [["pub_id", 29]]
+  ↳ app/controllers/pubs_controller.rb:15
+Completed 200 OK in 32ms (Views: 8.5ms | ActiveRecord: 15.7ms)
+
+
+Started GET "/app" for 127.0.0.1 at 2018-11-27 22:31:47 +1100
+Processing by PagesController#app as HTML
+  [1m[36mUser Load (5.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  Rendering pages/app.html.erb within layouts/application
+  Rendered pages/app.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 291ms (Views: 274.8ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/pub/29.json" for 127.0.0.1 at 2018-11-27 22:31:47 +1100
+Processing by PubsController#show as JSON
+  Parameters: {"id"=>"29"}
+  [1m[36mUser Load (15.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mPub Load (2.9ms)[0m  [1m[34mSELECT  "pubs".* FROM "pubs" WHERE "pubs"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/pubs_controller.rb:74
+  [1m[36mCACHE Pub Load (0.0ms)[0m  [1m[34mSELECT  "pubs".* FROM "pubs" WHERE "pubs"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/pubs_controller.rb:14
+  [1m[36mDrink Load (0.8ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks" WHERE "drinks"."pub_id" = $1[0m  [["pub_id", 29]]
+  ↳ app/controllers/pubs_controller.rb:15
+Completed 200 OK in 29ms (Views: 4.4ms | ActiveRecord: 19.2ms)
+
+
+Started GET "/app" for 127.0.0.1 at 2018-11-27 22:32:07 +1100
+Processing by PagesController#app as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  Rendering pages/app.html.erb within layouts/application
+  Rendered pages/app.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 84ms (Views: 75.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/pub/29.json" for 127.0.0.1 at 2018-11-27 22:32:08 +1100
+Processing by PubsController#show as JSON
+  Parameters: {"id"=>"29"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mPub Load (0.6ms)[0m  [1m[34mSELECT  "pubs".* FROM "pubs" WHERE "pubs"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/pubs_controller.rb:74
+  [1m[36mCACHE Pub Load (0.0ms)[0m  [1m[34mSELECT  "pubs".* FROM "pubs" WHERE "pubs"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/pubs_controller.rb:14
+  [1m[36mDrink Load (0.6ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks" WHERE "drinks"."pub_id" = $1[0m  [["pub_id", 29]]
+  ↳ app/controllers/pubs_controller.rb:15
+Completed 200 OK in 10ms (Views: 4.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/app" for 127.0.0.1 at 2018-11-27 22:32:24 +1100
+Processing by PagesController#app as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  Rendering pages/app.html.erb within layouts/application
+  Rendered pages/app.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 178ms (Views: 171.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/pub/29.json" for 127.0.0.1 at 2018-11-27 22:32:24 +1100
+Processing by PubsController#show as JSON
+  Parameters: {"id"=>"29"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mPub Load (1.2ms)[0m  [1m[34mSELECT  "pubs".* FROM "pubs" WHERE "pubs"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/pubs_controller.rb:74
+  [1m[36mCACHE Pub Load (0.0ms)[0m  [1m[34mSELECT  "pubs".* FROM "pubs" WHERE "pubs"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/pubs_controller.rb:14
+  [1m[36mDrink Load (1.0ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks" WHERE "drinks"."pub_id" = $1[0m  [["pub_id", 29]]
+  ↳ app/controllers/pubs_controller.rb:15
+Completed 200 OK in 12ms (Views: 4.3ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/app" for 127.0.0.1 at 2018-11-27 22:32:30 +1100
+Processing by PagesController#app as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  Rendering pages/app.html.erb within layouts/application
+  Rendered pages/app.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 86ms (Views: 75.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/pub/29.json" for 127.0.0.1 at 2018-11-27 22:32:30 +1100
+Processing by PubsController#show as JSON
+  Parameters: {"id"=>"29"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mPub Load (0.9ms)[0m  [1m[34mSELECT  "pubs".* FROM "pubs" WHERE "pubs"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/pubs_controller.rb:74
+  [1m[36mCACHE Pub Load (0.0ms)[0m  [1m[34mSELECT  "pubs".* FROM "pubs" WHERE "pubs"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/pubs_controller.rb:14
+  [1m[36mDrink Load (0.8ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks" WHERE "drinks"."pub_id" = $1[0m  [["pub_id", 29]]
+  ↳ app/controllers/pubs_controller.rb:15
+Completed 200 OK in 12ms (Views: 4.3ms | ActiveRecord: 2.7ms)
+
+
+Started POST "/orders/new" for 127.0.0.1 at 2018-11-27 22:33:08 +1100
+  
+ActionController::RoutingError (No route matches [POST] "/orders/new"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+webpacker (3.5.5) lib/webpacker/dev_server_proxy.rb:22:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/app" for 127.0.0.1 at 2018-11-27 22:33:57 +1100
+Processing by PagesController#app as HTML
+  [1m[36mUser Load (208.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  Rendering pages/app.html.erb within layouts/application
+  Rendered pages/app.html.erb within layouts/application (26.3ms)
+Completed 200 OK in 531ms (Views: 295.5ms | ActiveRecord: 208.1ms)
+
+
+Started GET "/pub/29.json" for 127.0.0.1 at 2018-11-27 22:33:58 +1100
+Processing by PubsController#show as JSON
+  Parameters: {"id"=>"29"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mPub Load (1.9ms)[0m  [1m[34mSELECT  "pubs".* FROM "pubs" WHERE "pubs"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/pubs_controller.rb:74
+  [1m[36mCACHE Pub Load (0.0ms)[0m  [1m[34mSELECT  "pubs".* FROM "pubs" WHERE "pubs"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/pubs_controller.rb:14
+  [1m[36mDrink Load (5.9ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks" WHERE "drinks"."pub_id" = $1[0m  [["pub_id", 29]]
+  ↳ app/controllers/pubs_controller.rb:15
+Completed 200 OK in 25ms (Views: 9.5ms | ActiveRecord: 8.8ms)
+
+
+Started GET "/app" for 127.0.0.1 at 2018-11-27 22:34:07 +1100
+Processing by PagesController#app as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  Rendering pages/app.html.erb within layouts/application
+  Rendered pages/app.html.erb within layouts/application (20.4ms)
+Completed 200 OK in 142ms (Views: 119.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/pub/29.json" for 127.0.0.1 at 2018-11-27 22:34:08 +1100
+Processing by PubsController#show as JSON
+  Parameters: {"id"=>"29"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mPub Load (0.8ms)[0m  [1m[34mSELECT  "pubs".* FROM "pubs" WHERE "pubs"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/pubs_controller.rb:74
+  [1m[36mCACHE Pub Load (0.0ms)[0m  [1m[34mSELECT  "pubs".* FROM "pubs" WHERE "pubs"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/pubs_controller.rb:14
+  [1m[36mDrink Load (0.6ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks" WHERE "drinks"."pub_id" = $1[0m  [["pub_id", 29]]
+  ↳ app/controllers/pubs_controller.rb:15
+Completed 200 OK in 12ms (Views: 5.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/app" for 127.0.0.1 at 2018-11-27 22:34:19 +1100
+Processing by PagesController#app as HTML
+  [1m[36mUser Load (3.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  Rendering pages/app.html.erb within layouts/application
+  Rendered pages/app.html.erb within layouts/application (17.5ms)
+Completed 200 OK in 109ms (Views: 97.9ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/pub/29.json" for 127.0.0.1 at 2018-11-27 22:34:19 +1100
+Processing by PubsController#show as JSON
+  Parameters: {"id"=>"29"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17
+  [1m[36mPub Load (0.6ms)[0m  [1m[34mSELECT  "pubs".* FROM "pubs" WHERE "pubs"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/pubs_controller.rb:74
+  [1m[36mCACHE Pub Load (0.0ms)[0m  [1m[34mSELECT  "pubs".* FROM "pubs" WHERE "pubs"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/pubs_controller.rb:14
+  [1m[36mDrink Load (1.8ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks" WHERE "drinks"."pub_id" = $1[0m  [["pub_id", 29]]
+  ↳ app/controllers/pubs_controller.rb:15
+Completed 200 OK in 14ms (Views: 5.6ms | ActiveRecord: 3.1ms)
+
+
