@@ -1,0 +1,28 @@
+.header__wrapper {
+  padding: 10px 25px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: flex-end;
+}
+
+.header__title {
+  color: rgb(224, 184, 62);
+  font-size: 56px;
+  line-height: 72px;
+  margin: 0;
+  letter-spacing: 2.5px;
+  padding: 10px;
+}
+
+.header__emoji {
+  font-size: 90px;
+  padding: 0 10px;
+}
+
+.header__subtitle {
+  color: #484848;
+  font-size: 20px;
+  line-height: 30px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}

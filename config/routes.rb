@@ -3,10 +3,15 @@ Rails.application.routes.draw do
   resources :orders
   resources :drinks
 
+  get '/app' => 'pages#app'
+
   get '/pubs/search/:query' => 'pubs#search'
   get '/pub/:id' => 'pubs#show'
   resources :pubs
 
-  resources :users
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  resources :users, except: [:index]
+  get "/login" => "session#new"
+  post "/login" => "session#create"
+  delete "/login" => "session#destroy"
+  
 end

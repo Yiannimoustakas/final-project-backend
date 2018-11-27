@@ -63,3 +63,5 @@ gem 'pry-rails'
 gem 'rack-cors', require: 'rack/cors'
 
 gem 'pry-byebug'
+
+gem 'webpacker'
