@@ -17,7 +17,8 @@
 .sign__in__message{
   left: 50%;
   top: 5vh;
-  color: tomato;
+  background-color: rgb(224, 184, 62);
+  color: #484848;
   position: absolute;
   display: inline-block;
   font-size: 20px;
