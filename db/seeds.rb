@@ -20,18 +20,17 @@ puts "created #{Pub.all.length} pubs"
 
 Drink.destroy_all
 
-d1 = Drink.create name: "Beer", pub: p1
-d2 = Drink.create name: "Beer", pub: p2
-d3 = Drink.create name: "Beer", pub: p3
-d4 = Drink.create name: "Beer", pub: p4
-d5 = Drink.create name: "Wine", pub: p1
-d6 = Drink.create name: "Wine", pub: p2
-d7 = Drink.create name: "Wine", pub: p3
-d8 = Drink.create name: "Wine", pub: p4
-d9 = Drink.create name: "Champagne", pub: p1
-d10 = Drink.create name: "Champagne", pub: p2
-d11 = Drink.create name: "Champagne", pub: p3
-d12 = Drink.create name: "Champagne", pub: p4
+d1 = Drink.create name: "Beer", pub: p1, emoji: '🍺', price: 10
+d2 = Drink.create name: "Beer", pub: p2, emoji: '🍺', price: 10
+d3 = Drink.create name: "Beer", pub: p3, emoji: '🍺', price: 10
+d4 = Drink.create name: "Beer", pub: p4, emoji: '🍺', price: 10
+d5 = Drink.create name: "Wine", pub: p1, emoji: '🍷', price: 10
+d6 = Drink.create name: "Wine", pub: p2, emoji: '🍷', price: 10
+d7 = Drink.create name: "Wine", pub: p3, emoji: '🍷', price: 10
+d8 = Drink.create name: "Wine", pub: p4, emoji: '🍷', price: 10
+d9 = Drink.create name: "Champagne", pub: p1, emoji: '🥂', price: 10
+d10 = Drink.create name: "Champagne", pub: p2, emoji: '🥂', price: 10
+d11 = Drink.create name: "Champagne", pub: p3, emoji: '🥂', price: 10
 
 puts "created #{Drink.all.length} drinks"
 
