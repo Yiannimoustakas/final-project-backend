@@ -8,7 +8,8 @@ class SearchResults extends Component{
   constructor(){
     super();
     this.state = {
-      pubs: []
+      pubs: [],
+      query: ''
     }
   };
 
@@ -25,7 +26,7 @@ class SearchResults extends Component{
     .then(response => {
       // console.log("response", response.data);
       this.setState({pubs: response.data})
-      console.log(this.state);
+      this.setState({query: this.props.match.params.query})
     })
     .catch(console.warn)
   };
@@ -39,12 +40,12 @@ class SearchResults extends Component{
     return(
       <div>
         <h1>Search Results for: "{this.props.match.params.query}"</h1>
-        <span className="back__button" onClick={e => this.handleBackClick(e)}>Back To Search</span>
+        <Link to='/' className="back__button">Back To Search</Link>
         {this.state.pubs.length === 0 ? <div>Loading...</div> :
           <ul>
             {this.state.pubs.map(p => (
               <li className="pub__list"  key={p.id}>
-                <Link to={`/pub/${p.id}`}>
+                <Link to={`/pub/${p.id}`} query={this.state.query}>
                   {p.name} ({p.location})
                 </Link>
               </li>

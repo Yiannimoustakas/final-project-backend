@@ -11,6 +11,39 @@
 
   <body>
     <div class="header__wrapper">
+      <nav role="navigation">
+        <div id="menuToggle">
+          <!--
+          A fake / hidden checkbox is used as click reciever,
+          so you can use the :checked selector on it.
+          -->
+          <input type="checkbox" />
+
+          <!--
+          Some spans to act as a hamburger.
+
+          They are acting like a real hamburger,
+          not that McDonalds stuff.
+          -->
+          <span></span>
+          <span></span>
+          <span></span>
+
+          <!--
+          Too bad the menu has to be inside of the button
+          but hey, it's pure CSS magic.
+          -->
+          <ul id="menu">
+            <% if @current_user.present? %>
+              <li>Hi <%= @current_user.username %></li>
+              <li><%= link_to 'Logout', login_path, method: 'delete' %></li>
+            <% else %>
+              <a href=<%= login_path %>><li>Log In</li></a>
+              <a href=<%= new_user_path %>><li>Sign Up</li></a>
+            <% end %>
+          </ul>
+        </div>
+      </nav>
       <span role="img" aria-label="ghost" class="header__emoji">
         🍺
       </span>
@@ -18,6 +51,9 @@
         Hey Brew
         <div class="header__subtitle">pens down, drinks up</div>
       </h1>
+      <% if !@current_user.present? %>
+      <div class="sign__in__message">Hey brew, to experience the full awesomeness of the site, <br> please sign up or log in from the nav bar</div>
+      <% end %>
     </div>
     <%= yield %>
   </body>
