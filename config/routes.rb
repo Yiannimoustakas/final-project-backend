@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root "session#new"
+  root "pages#app"
   resources :orders
   resources :drinks
 

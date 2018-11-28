@@ -1,10 +1,12 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 import axios from 'axios';
-import SearchForm from './SearchForm'
+import SearchForm from './SearchForm';
+import MapContainer from './MapContainer';
 
 
 class SearchResults extends Component{
+
   constructor(){
     super();
     this.state = {
@@ -15,7 +17,7 @@ class SearchResults extends Component{
 
   componentDidMount(){
     this.performSearch(this.props.match.params.query);
-    setInterval(() => this.performSearch(), 5000)
+
   }
 
   performSearch( query ) {
@@ -37,8 +39,11 @@ class SearchResults extends Component{
   }
 
   render(){
+    if (this.state.pubs.length < 0){
+      return <div>Loading Results...</div>
+    }
     return(
-      <div>
+        <div>
         <h1>Search Results for: "{this.props.match.params.query}"</h1>
         <Link to='/' className="back__button">Back To Search</Link>
         {this.state.pubs.length === 0 ? <div>Loading...</div> :
@@ -53,6 +58,9 @@ class SearchResults extends Component{
           </ul>
         }
         <h2>Map</h2>
+        <div className="map__box">
+          {this.state.pubs.length > 0 && <MapContainer items={this.state.pubs}/>}
+        </div>
       </div>
     )
   }

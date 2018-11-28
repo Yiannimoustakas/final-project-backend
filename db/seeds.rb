@@ -11,10 +11,10 @@ puts "created #{User.all.length} users"
 
 Pub.destroy_all
 
-p1 = Pub.create name: "O'Malley's Pub", location: "180 Addison Rd, Marrickville, NSW 2204"
-p2 = Pub.create name: "The Civic Hotel", location: "114 King St, Newtown, NSW 2042"
-p3 = Pub.create name: "Moe's Tavern", location: "68 Bay St, Ultimo, NSW 2007"
-p4 = Pub.create name: "Frankie's Pizza", location: "50 Hunter St, Sydney 2000"
+p1 = Pub.create name: "O'Malley's Pub", location: "180 Addison Rd, Marrickville, NSW 2204", latitude: '-33.901441', longitude: '151.161391'
+p2 = Pub.create name: "The Civic Hotel", location: "114 King St, Newtown, NSW 2042", latitude: '-33.900271', longitude: '151.178149'
+p3 = Pub.create name: "Moe's Tavern", location: "68 Bay St, Ultimo, NSW 2007", latitude: '-33.883308', longitude: '151.194942'
+p4 = Pub.create name: "Frankie's Pizza", location: "50 Hunter St, Sydney 2000", latitude: '-33.866237', longitude: '151.210044'
 
 puts "created #{Pub.all.length} pubs"
 

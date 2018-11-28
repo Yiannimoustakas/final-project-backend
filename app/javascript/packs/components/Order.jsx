@@ -12,13 +12,17 @@ class Order extends Component{
             🍺
           </span>
         </div>
-        <div>Current Order</div>
-        <ul>
-          {this.props.order.map(o => <li>1x {o}</li>)}
-        </ul>
-        <div>Total Price</div>
-        ${this.props.price}.00
-        <div><button onClick={this.props.handleSubmit}>Submit Order</button><button onClick={this.props.handleReset}>Reset Order</button></div>
+        {this.props.order.length===0 ? <div></div> :
+        <div>
+          <div>Current Order</div>
+          <ul>
+            {this.props.order.map(o => <li>1x {o.name}</li>)}
+          </ul>
+          <div>Total Price</div>
+          ${this.props.price}.00
+        </div>
+        }
+        <div><button className="order__submit" onClick={this.props.handleSubmit}>Submit Order</button><button className="order__reset" onClick={this.props.handleReset}>Reset Order</button></div>
       </div>
     );
   }

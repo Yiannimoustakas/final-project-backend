@@ -1,6 +1,8 @@
 class OrdersController < ApplicationController
   before_action :set_order, only: [:show, :edit, :update, :destroy]
 
+  skip_before_action :verify_authenticity_token
+
   # GET /orders
   # GET /orders.json
   def index
@@ -24,12 +26,23 @@ class OrdersController < ApplicationController
   # POST /orders
   # POST /orders.json
   def create
-    @order = Order.new(order_params)
+
+    @order = Order.new user: @current_user
 
     respond_to do |format|
       if @order.save
+
+        # can't use .where syntax because it removes duplicates,
+        # and we need them for ordering multiples of the same drinks
+        # TODO: add LineItem model to order to track quantities for each drink
+        # @order.drinks << Drink.where( ids: params[:drink_ids] )
+        p "drink IDs:", params[:drink_ids]
+        order_drinks = params[:drink_ids].map{ |id| Drink.find id }
+        p "drink objects: ", order_drinks
+        @order.drinks << order_drinks
+
         format.html { redirect_to @order, notice: 'Order was successfully created.' }
-        format.json { render :show, status: :created, location: @order }
+        format.json { render(json: {order: @order}) }
       else
         format.html { render :new }
         format.json { render json: @order.errors, status: :unprocessable_entity }

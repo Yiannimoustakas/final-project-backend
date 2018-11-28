@@ -5,13 +5,13 @@ import Order from './Order'
 import axios from 'axios';
 import Geocode from "react-geocode";
 
-const ORDER_URL = 'http://localhost:3000/orders/new'
+const ORDER_URL = 'http://localhost:3000/orders.json'
 
 class ShowPub extends Component {
   constructor(){
     super();
     this.state = {
-      pub: [],
+      pub: {},
       order: [],
       price: 0
     };
@@ -21,10 +21,16 @@ class ShowPub extends Component {
     this.showPub(this.props.match.params.id);
   }
 
-  handleClick(e, drink){
-    e.preventDefault()
-    this.setState({order: this.state.order.concat(drink.name)})
-    this.setState({price: this.state.price + drink.price})
+  handleClick(drink){
+    const order = [...this.state.order];
+    order.push({
+      id: drink.id,
+      name: drink.name
+    });
+    this.setState({
+      order,
+      price: this.state.price + drink.price
+    });
   }
 
   submitOrder = () => {
@@ -35,9 +41,15 @@ class ShowPub extends Component {
     const utterThat = new SpeechSynthesisUtterance(`You haven't ordered anything. Please select a beverage before submitting.`)
     {this.state.order.length === 0 ? synth.speak(utterThat) :
     synth.speak(utterThis)}
-    axios.post(ORDER_URL, this.state.pub.id, this.state.pub.drinks)
-    .then(response => {
 
+    const drinkIDs = this.state.order.map(d => d.id)
+
+    axios.post(ORDER_URL, {
+      pub_id: this.state.pub.id,
+      drink_ids: drinkIDs
+    })
+    .then(response => {
+      console.log(response.data);
     })
     .catch(console.warn)
   }
@@ -78,13 +90,11 @@ class ShowPub extends Component {
             <br/>
             <h3>Menu</h3>
             <ul>
-              {this.state.pub.drinks.map(d => <li>{d.emoji}{d.name} <span><strong>Price:</strong> ${d.price}.00</span> <button onClick={event => this.handleClick(event, d)}>Order</button></li>)}
+              {this.state.pub.drinks.map(d => <li>{d.emoji}{d.name} <strong>Price:</strong> ${d.price}.00 <button onClick={() => this.handleClick(d)}>Order</button></li>)}
             </ul>
             <br/>
             <h3>Location</h3>
             <p>{this.state.pub.location}</p>
-            <br/>
-            <h3>Map</h3>
           </div>
         </div>
         <div className="order__wrapper">

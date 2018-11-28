@@ -22,3 +22,12 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+
+const markers = props.items.map( item => {
+  <MapMarker
+  name={item.name}
+  key={item.id}
+  location={{lat: parseFloat(item.latitude), lng: parseFloat(item.longitude)}}
+  />
+})
