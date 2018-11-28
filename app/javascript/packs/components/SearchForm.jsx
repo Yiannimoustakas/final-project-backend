@@ -2,18 +2,19 @@ import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 
 class SearchForm extends Component{
-  constructor(){
-    super();
+  constructor(props){
+    super(props);
     this.state = ({
       query: ""
     });
   }
 
   handleInput(event){
-    // console.log(event.target.value);
+
     this.setState({
       query: event.target.value
     });
+
   }
 
   handleSubmit(event){

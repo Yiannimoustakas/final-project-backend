@@ -6,6 +6,7 @@ class PubsController < ApplicationController
   # GET /pubs.json
   def index
     @pubs = Pub.all
+
   end
 
   # GET /pubs/1

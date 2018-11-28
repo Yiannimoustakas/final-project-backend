@@ -8,8 +8,7 @@ class MapMarker extends Component{
         <Marker
           position={this.props.location}
           icon={`../assets/images/maps-icon.png`}
-        >
-        </Marker>
+        />
     );
   }
 }

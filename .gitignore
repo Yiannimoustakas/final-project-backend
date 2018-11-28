@@ -49,3 +49,6 @@ node_modules/
 /yarn-error.log
 
 .byebug_history
+
+#Ignore secrets.yml file
+secrets.yml
