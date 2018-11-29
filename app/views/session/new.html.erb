@@ -1,18 +1,28 @@
-<h2>Login</h2>
 
 <% if flash[:error] %>
   <strong><%= flash[:error] %></strong>
   <br> <br>
 <% end %>
 
-<%= form_tag login_path do %>
-
-  <%= label_tag :email %>
-  <%= email_field_tag :email, nil %>
-  <br>
-  <%= label_tag :password %>
-  <%= password_field_tag :password, nil %>
-  <br>
-  <%= submit_tag 'Login', class: "button2" %>
-
-<% end %>
+<div class="container__login">
+  <div class="message__login signup__login">
+    <div class="btn-wrapper__login">
+      <button class="menuitem__button" id="signup">SignUp</button>
+      <button class="menuitem__button" id="login"> Login</button>
+    </div>
+  </div>
+  <div class="form__login form--signup">
+    <div class="form--heading">Welcome! Sign Up</div>
+    <%= render partial: 'users/form', locals: {user: User.new} %>
+  </div>
+  <div class="form__login form--login">
+    <div class="form--heading">Welcome back!</div>
+      <%= form_tag login_path do %>
+        <%= label_tag :email %>
+        <%= email_field_tag :email, nil %>
+        <%= label_tag :password %>
+        <%= password_field_tag :password, nil %>
+        <%= submit_tag 'Login', class: "menuitem__button" %>
+      <% end %>
+  </div>
+</div>

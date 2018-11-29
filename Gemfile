@@ -69,3 +69,5 @@ gem 'webpacker'
 gem 'knock'
 
 gem 'geocoder'
+
+gem 'jquery-rails'

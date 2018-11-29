@@ -1,3 +1,141 @@
 // Place all the styles related to the Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.message__login, .form__login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container__login {
+  left: 25vw;
+  width: 700px;
+  font-family: 'Roboto', sans-serif;
+  height: 400px;
+  background: white;
+  position: relative;
+  display: grid;
+  grid-template: 100% / 50% 50%;
+  box-shadow: 2px 2px 10px 0 rgba(#333, 0.2);
+}
+
+.message__login {
+  position: absolute;
+  background: white;
+  width: 50%;
+  height: 100%;
+  transition: 0.5s all ease;
+  transform: translateX(100%);
+  z-index: 4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  &:before {
+    position: absolute;
+    content: '';
+    width: 1px;
+    height: 70%;
+    background: grey;
+    opacity: 0;
+    left: 0;
+    top:15%;
+  }
+
+  .button__login {
+    margin: 5px 0;
+    font-family: 'Roboto', sans-serif;
+  }
+}
+
+.signup__login {
+  &:before {
+    opacity: 0.3;
+    left: 0;
+  }
+}
+
+.login__login {
+  &:before {
+    opacity: 0.3;
+    left: 100%;
+  }
+}
+
+
+.btn-wrapper__login {
+  width: 60%;
+}
+
+.form__login {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  &--heading {
+    font-size: 18px;
+    height: 50px;
+    color: blue;
+    font-family: 'Playfair Display', serif;
+  }
+}
+
+.form__login {
+  width: 70%;
+  > * {
+    margin: 10px;
+  }
+  .input__login {
+    width: 90%;
+    border: 0;
+    border-bottom: 1px solid rgba(grey, 0.5);
+    font-size: 13px;
+    font-weight: 300;
+    color: #797A9E;
+    letter-spacing: 0.11em;
+
+    &::placeholder {
+      color: #C3C3D8;
+      font-size: 10px;
+    }
+
+    &:focus {
+      outline: 0;
+      border-bottom: 1px solid rgba(blue, 0.7);
+      transition: 0.6s all ease;
+    }
+  }
+}
+
+.button__login {
+  width: 100%;
+  height: 30px;
+  border: 0;
+  outline: 0;
+  color: white;
+  font-size: 15px;
+  font-weight: 300;
+  position: relative;
+  z-index: 3;
+  letter-spacing: 2px;
+  background: linear-gradient(45deg, blue, purple);
+  font-family: 'Playfair Display', serif;
+
+  &:hover {
+    transform: translateY(4px);
+    transition: 0.4s all ease;
+  }
+}
+
+
+@media (max-width: 750px){
+  .container__login {
+    transform: scale(0.8);
+  }
+}

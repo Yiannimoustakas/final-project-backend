@@ -48,8 +48,8 @@
 }
 
 .menuitem__button {
-  color: #7795f8;
-  border: 1px solid #7795f8;
+  color: rgb(224, 184, 62);
+  border: 1px solid rgb(224, 184, 62);
   background-color: #fff;
   display: inline-block;
   height: 40px;
@@ -60,6 +60,10 @@
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.025em;
+}
+
+.menuitem__button:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 5px 5px 0 rgba(0,0,0,0.19);
 }
 
 .menuitem__column {

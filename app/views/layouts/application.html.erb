@@ -39,9 +39,6 @@
         Hey Brew
         <div class="header__subtitle">pens down, drinks up</div>
       </h1>
-      <% if !@current_user.present? %>
-      <div class="sign__in__message">Hey brew, to experience the full awesomeness of the site, <br> please sign up or log in from the nav bar</div>
-      <% end %>
     </div>
     <%= yield %>
   </body>
