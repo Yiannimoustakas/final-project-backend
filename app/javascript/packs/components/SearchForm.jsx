@@ -76,7 +76,7 @@ class SearchForm extends Component{
             <h4>Search By Name or Suburb</h4>
             <form className='form' onSubmit={event => this.handleSubmit(event)}>
                 <input className='input' type="text" onChange={ event => this.handleInput(event)}/>
-                <i class="fa fa-search"></i>
+                <i className="fa fa-search"></i>
             </form>
           </div>
         </div>
