@@ -2,10 +2,10 @@ import React, {Component} from 'react'
 
 const OrderMade = ({order, price, orderID}) => (
   <div>
-    <div>Order Successful!</div>
-    <button>Edit Order</button>
-    <button>Cancel Order</button>
-    <button>Profile Page</button>
+    <div className="order__text">Order Successful!</div>
+    <button className="order__reset">Edit Order</button>
+    <button className="order__reset">Cancel Order</button>
+    <button className="order__reset">Profile Page</button>
   </div>
 )
 

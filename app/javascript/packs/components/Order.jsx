@@ -21,11 +21,13 @@ class Order extends Component{
         <div>
           <div>Current Order</div>
           <ul>
-            {this.props.order.map(o => <li>1x {o.name}</li>)}
+            {this.props.order.map(o => <li className="order__item">1x {o.name}</li>)}
           </ul>
-          <div>Total Price</div>
-          <div>
-            ${this.props.price}.00
+          <div className="order__total">
+            Total Price
+            <div>
+              ${this.props.price}.00
+            </div>
           </div>
         </div>
       }

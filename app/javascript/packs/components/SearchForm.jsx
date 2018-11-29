@@ -54,6 +54,7 @@ class SearchForm extends Component{
     if( this.state.geolocation ){
       geolocationForm = (
         <span>
+          <br/>
           OR show results within (dropdown) 15 km
           <Link to={{
             pathname: `/geosearch/${this.state.distance}`,
@@ -69,13 +70,16 @@ class SearchForm extends Component{
 
     return(
       <div>
-        <h1 className='.header__subtitle'>First Things First, Let's find you a local</h1>
-        <h4>Search By Name or Suburb</h4>
-        <form onSubmit={event => this.handleSubmit(event)}>
-            <input type="text" onChange={ event => this.handleInput(event)}/>
-            <input type="submit" value="search for local"/>
-            { geolocationForm }
-        </form>
+        <div className="searchform__container">
+          <div className="searchform__div">
+            <h1 className='.header__subtitle'>First Things First, Let's find you a local</h1>
+            <h4>Search By Name or Suburb</h4>
+            <form className='form' onSubmit={event => this.handleSubmit(event)}>
+                <input className='input' type="text" onChange={ event => this.handleInput(event)}/>
+                <i class="fa fa-search"></i>
+            </form>
+          </div>
+        </div>
       </div>
     )
   }

@@ -7,8 +7,5 @@ class PagesController < ApplicationController
     end
 
     render react_component: "SearchForm", props: {api_key: @api_key, prerender: false}
-    # def api_key
-    #   @api_key = ENV['GOOGLE_MAPS_API_KEY']
-    # end
   end
 end

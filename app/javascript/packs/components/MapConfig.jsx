@@ -7,7 +7,7 @@ const MapConfig = withScriptjs(withGoogleMap((props) =>{
 
   return (
     <GoogleMap
-    defaultZoom={13}
+    defaultZoom={12}
     center={
       {lat: parseFloat(props.items[0].latitude), lng: parseFloat(props.items[0].longitude)}
     }

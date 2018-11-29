@@ -64,10 +64,10 @@ class SearchResults extends Component{
         <div>
         <h1>Search Results for: "{this.props.match.params.query}"</h1>
         <Link to='/' className="back__button">Back To Search</Link>
-        {this.state.pubs.length === 0 ? <div>Loading...</div> :
+        {this.state.pubs.length === 0 ? <div className="menuitem__name">Loading...</div> :
           <ul>
             {this.state.pubs.map(p => (
-              <li className="pub__list"  key={p.id}>
+              <li className="pub__list menuitem__name"  key={p.id}>
                 <Link to={`/pub/${p.id}`} query={this.state.query}>
                   {p.name} ({p.location})
                 </Link>

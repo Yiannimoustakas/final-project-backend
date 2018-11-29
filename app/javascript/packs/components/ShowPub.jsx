@@ -102,11 +102,13 @@ class ShowPub extends Component {
             <br/>
             <span className="back__button" onClick={e => this.handleBackClick(e)}>Back</span>
             <br/>
-            <h3>Menu</h3>
-            <ul>
-              {this.state.pub.drinks.map(d => <li>{d.emoji}{d.name} <strong>Price:</strong> ${d.price}.00 <button onClick={() => this.handleClick(d)}>Order</button></li>)}
-            </ul>
-            <br/>
+            <div className="menuitem__wrapper">
+              <h3>Menu</h3>
+              <ul className="menuitem__column">
+                {this.state.pub.drinks.map(d => <li className="menuitem__name">{d.emoji}{d.name} <strong>Price:</strong> ${d.price}.00 <button className="menuitem__button" onClick={() => this.handleClick(d)}>Order</button></li>)}
+              </ul>
+              <br/>
+            </div>
             <h3>Location</h3>
             <p>{this.state.pub.location}</p>
           </div>
