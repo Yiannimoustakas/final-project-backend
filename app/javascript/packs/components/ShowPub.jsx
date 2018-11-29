@@ -13,7 +13,9 @@ class ShowPub extends Component {
     this.state = {
       pub: {},
       order: [],
-      price: 0
+      price: 0,
+      orderStatus: false,
+      orderID: ''
     };
   };
 
@@ -33,14 +35,25 @@ class ShowPub extends Component {
     });
   }
 
-  submitOrder = () => {
+  utterThis = () => {
     const synth = window.speechSynthesis
     const utterThis = new SpeechSynthesisUtterance(
-      `Welcome to Hey Bru. You have ordered ${this.state.order.map(item => `the house ${item}`)}. This comes to a total of ${this.state.price} dollars. Your order will be ready to pick up from ${this.state.pub.name} in 15 minutes.`
-    )
+      `Welcome to Hey Bru. You have ordered ${this.state.order.map(item => `the house ${item.name}`)}. This comes to a total of ${this.state.price} dollars. Your order will be ready to pick up from ${this.state.pub.name} in 15 minutes.`)
+      synth.speak(utterThis)
+  }
+
+  utterThat = () => {
+    const synth = window.speechSynthesis
     const utterThat = new SpeechSynthesisUtterance(`You haven't ordered anything. Please select a beverage before submitting.`)
-    {this.state.order.length === 0 ? synth.speak(utterThat) :
-    synth.speak(utterThis)}
+    synth.speak(utterThat)
+  }
+
+  submitOrder = () => {
+    {this.state.order.length === 0 ? this.utterThat() : this.utterThis()}
+
+    if (this.state.order.length === 0){
+      return;
+    }
 
     const drinkIDs = this.state.order.map(d => d.id)
 
@@ -50,6 +63,7 @@ class ShowPub extends Component {
     })
     .then(response => {
       console.log(response.data);
+      this.setState({orderStatus: true, orderID: response.data.order.id})
     })
     .catch(console.warn)
   }
@@ -86,7 +100,7 @@ class ShowPub extends Component {
           <div>
             <h1>{this.state.pub.name}</h1>
             <br/>
-            <span className="back__button" onClick={e => this.handleBackClick(e)}>Back To Results</span>
+            <span className="back__button" onClick={e => this.handleBackClick(e)}>Back To Pubs</span>
             <br/>
             <h3>Menu</h3>
             <ul>
@@ -98,7 +112,7 @@ class ShowPub extends Component {
           </div>
         </div>
         <div className="order__wrapper">
-          <Order order={this.state.order} price={this.state.price} handleReset={this.resetOrder} handleSubmit={this.submitOrder}/>
+          <Order order={this.state.order} price={this.state.price} handleReset={this.resetOrder} handleSubmit={this.submitOrder} orderStatus={this.state.orderStatus} orderID={this.state.orderID}/>
         </div>
       </div>
     )

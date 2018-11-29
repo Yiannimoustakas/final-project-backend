@@ -13,6 +13,7 @@ class MapContainer extends Component{
 
 		return (
 			<MapConfig
+        isMarkerShown
 				items={this.props.items}
 				googleMapURL={google_URL}
 				loadingElement={<div style={{ height: `100vh` }} />}

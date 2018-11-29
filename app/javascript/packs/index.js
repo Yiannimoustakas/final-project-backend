@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const node = document.getElementById('api_key')
   const data = JSON.parse(node.getAttribute('data'))
   ReactDOM.render(
-    <Routes api_key={data} />,
+    <Routes  />,
     document.body.appendChild(document.createElement('div')),
   )
 })
