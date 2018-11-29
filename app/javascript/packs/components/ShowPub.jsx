@@ -5,7 +5,8 @@ import Order from './Order'
 import axios from 'axios';
 import Geocode from "react-geocode";
 
-const ORDER_URL = 'http://localhost:3000/orders.json'
+// const ORDER_URL = 'http://localhost:3000/orders.json'
+const ORDER_URL = '/orders.json'
 
 class ShowPub extends Component {
   constructor(){
@@ -81,7 +82,8 @@ class ShowPub extends Component {
   }
 
   showPub(id) {
-    const pub_URL = `http://localhost:3000/pub/${id}.json`
+    {/*const pub_URL = `http://localhost:3000/pub/${id}.json`*/}
+    const pub_URL = `/pub/${id}.json`
     axios.get(pub_URL)
     .then(response => {
       this.setState({pub: response.data})

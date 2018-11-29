@@ -39,8 +39,8 @@ class SearchResults extends Component{
   }
 
   performSearch( query ) {
-    // console.log("performSearch", this, query);
-    const pubresults_URL = `http://localhost:3000/pubs/search/${this.props.match.params.query}.json`;
+    {/*const pubresults_URL = `http://localhost:3000/pubs/search/${this.props.match.params.query}.json`;*/}
+    const pubresults_URL = `/pubs/search/${this.props.match.params.query}.json`;
 
     axios.get( pubresults_URL )
     .then(response => {
