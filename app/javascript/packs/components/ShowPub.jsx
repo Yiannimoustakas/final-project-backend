@@ -100,7 +100,7 @@ class ShowPub extends Component {
           <div>
             <h1>{this.state.pub.name}</h1>
             <br/>
-            <span className="back__button" onClick={e => this.handleBackClick(e)}>Back To Pubs</span>
+            <span className="back__button" onClick={e => this.handleBackClick(e)}>Back</span>
             <br/>
             <h3>Menu</h3>
             <ul>

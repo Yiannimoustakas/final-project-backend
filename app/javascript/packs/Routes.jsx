@@ -13,7 +13,7 @@ class Routes extends React.Component{
     <Router>
       <div>
         <Route exact path='/'               component={SearchForm}/>
-        <Route exact path="/search/:query"  component={ SearchResults  } />
+        <Route path={["/search/:query", "geosearch/:distance"]}  component={ SearchResults  } />
         <Route exact path='/pub/:id'        component={ShowPub}/>
 
       </div>

@@ -7,6 +7,7 @@ Rails.application.routes.draw do
 
   get '/pubs/search/:query' => 'pubs#search'
   get '/pub/:id' => 'pubs#show'
+  get 'pubs/geosearch/:distance' => 'pubs#geo_search'
   resources :pubs
 
   resources :users, except: [:index]

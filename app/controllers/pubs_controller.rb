@@ -20,6 +20,10 @@ class PubsController < ApplicationController
     render json: Pub.where('name || location ILIKE ?', "%#{params[:query]}%")
   end
 
+  def geo_search
+    render json: Pub.near("#{params[:coords]}", '15, units: :km')
+  end
+
   # GET /pubs/new
   def new
     @pub = Pub.new

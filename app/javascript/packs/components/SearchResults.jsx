@@ -11,13 +11,31 @@ class SearchResults extends Component{
     super();
     this.state = {
       pubs: [],
-      query: ''
+      query: '',
     }
   };
 
   componentDidMount(){
-    this.performSearch(this.props.match.params.query);
+    if (this.props.match.params.query.length === 0){
+      const coords = {lat: parseFloat(this.props.location.state.lat), lng: parseFloat(this.props.location.state.lat)}
+      const distance = parseInt(this.props.location.state.distance)
+      this.performGeoSearch(coords, distance);
+    } else {
+      this.performSearch(this.props.match.params.query);
+      setInterval(this.performSearch(this.props.match.params.query), 5000)
+    }
+  }
 
+  performGeoSearch(coords, distance){
+    const GEO_URL = `/geosearch/${this.props.match.params.distance}.json`
+    axios.post(GEO_URL, {
+      coords,
+      distance
+    })
+    .then(response => {
+      console.log(response.data);
+    })
+    .catch(console.warn)
   }
 
   performSearch( query ) {
@@ -59,7 +77,7 @@ class SearchResults extends Component{
         }
         <h2>Map</h2>
         <div className="map__box">
-          {this.state.pubs.length > 0 && <MapContainer items={this.state.pubs}/>}
+          {this.state.pubs.length > 0 && <MapContainer items={this.state.pubs} />}
         </div>
       </div>
     )

@@ -67,3 +67,5 @@ gem 'pry-byebug'
 gem 'webpacker'
 
 gem 'knock'
+
+gem 'geocoder'
