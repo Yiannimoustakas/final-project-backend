@@ -17,8 +17,9 @@
 //= require turbolinks
 //= require_tree .
 
-$(document).ready(() => {
 
+$(document).ready(() => {
+  // these functions allow us to animate the login sign up window slide on the home page. Each css class have transformation keys inside of them and switching between the two gives us the seamless 
   $("#signup").click(() => {
     $(".message__login").css("transform", "translateX(100%)");
     if ($(".message__login").hasClass("login__login")) {

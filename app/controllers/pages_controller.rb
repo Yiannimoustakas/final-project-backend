@@ -1,4 +1,5 @@
 class PagesController < ApplicationController
+  # Allows me to view the api-key set in the bash profile in the javascript (react) folder 
   def app
     @api_key = ENV['GOOGLE_MAPS_API_KEY']
     unless @current_user.present?

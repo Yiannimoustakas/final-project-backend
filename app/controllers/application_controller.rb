@@ -2,7 +2,8 @@ class ApplicationController < ActionController::Base
   before_action :fetch_user
 
   private
-
+  # method used to validate pages of the site that needs login access
+  # otherwise user will be redirected to the signup/login page
   def check_if_logged_in
     unless @current_user.present?
       flash[:error] = "You must  be logged in to view that page."
