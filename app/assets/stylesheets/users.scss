@@ -2,6 +2,10 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+// LOGIN / SIGN UP PAGE
+
+// This styling is taking care of the login and sign up page
+
 .message__login, .form__login {
   display: flex;
   justify-content: center;
@@ -130,12 +134,5 @@
   &:hover {
     transform: translateY(4px);
     transition: 0.4s all ease;
-  }
-}
-
-
-@media (max-width: 750px){
-  .container__login {
-    transform: scale(0.8);
   }
 }

@@ -18,8 +18,11 @@
 //= require_tree .
 
 
+// This function is animating the login/signup form
+//  This page will add or remove classes depending on user event
+
 $(document).ready(() => {
-  // these functions allow us to animate the login sign up window slide on the home page. Each css class have transformation keys inside of them and switching between the two gives us the seamless 
+  // these functions allow us to animate the login sign up window slide on the home page. Each css class have transformation keys inside of them and switching between the two gives us the seamless
   $("#signup").click(() => {
     $(".message__login").css("transform", "translateX(100%)");
     if ($(".message__login").hasClass("login__login")) {
