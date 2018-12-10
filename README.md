@@ -1,33 +1,18 @@
-# README
+# Final Project: Hey Brew
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+My final project completed at GA was a free for all. One week to complete something uttely spectacular, utilising all of the skills learned over the course of 3 months. I decided I would do this using a Ruby on Rails backend that spoke to a React.js frontend, and make it a super cool single page app that everyone has been going crazy for. It's so hot right now.
 
-Things you may want to cover:
+## Link to live site
+<>
 
-* Ruby version
+## Tech Used
+React.js
+Google Maps API
+Ruby on Rails
+PostgresQL
+Heroku 
+Pure CSS Animation
 
-* System dependencies
+## Project Description
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-const markers = props.items.map( item => {
-  <MapMarker
-  name={item.name}
-  key={item.id}
-  location={{lat: parseFloat(item.latitude), lng: parseFloat(item.longitude)}}
-  />
-})
+My idea was to create a web app where users could order a round of alcoholic beverages, and the order would be ready for them by the time they arived to the pub. The idea was derived from a few existing apps where you can do something similar with food and drink.
