@@ -7,7 +7,9 @@ import MapContainer from './MapContainer';
 
 class SearchResults extends Component{
 
-  {/* We need to set up the pubs data as an array. We also need to set the query string we received from the searchForm and add it to our state once we handle the params. */}
+  /*
+    We need to set up the pubs data as an array. We also need to set the query string we received from the searchForm and add it to our state once we handle the params.
+  */
   constructor(){
     super();
     this.state = {
@@ -16,7 +18,9 @@ class SearchResults extends Component{
     }
   };
 
-  {/* componentDidMount() ensures we receive the data after every page rendering. If the users browser can obtain the goe location of the user then perform the geoSearch() function. Otherwise we perform the performSearch() function  */}
+  /*
+    componentDidMount() ensures we receive the data after every page rendering. If the users browser can obtain the goe location of the user then perform the geoSearch() function. Otherwise we perform the performSearch() function
+  */
   componentDidMount(){
     if (this.props.match.params.query.length === 0){
       const coords = {lat: parseFloat(this.props.location.state.lat), lng: parseFloat(this.props.location.state.lat)}
@@ -28,7 +32,9 @@ class SearchResults extends Component{
     }
   }
 
-  {/* This was going to be my way of adding boundaries to the map but ran out of time. This is an upcoming feature. */}
+  /*
+    This was going to be my way of adding boundaries to the map but ran out of time. This is an upcoming feature.
+  */
   performGeoSearch(coords, distance){
     const GEO_URL = `/geosearch/${this.props.match.params.distance}.json`
     axios.post(GEO_URL, {
@@ -42,10 +48,14 @@ class SearchResults extends Component{
   }
 
   performSearch( query ) {
-    {/*const pubresults_URL = `http://localhost:3000/pubs/search/${this.props.match.params.query}.json`;*/}
+    /*
+      const pubresults_URL = `http://localhost:3000/pubs/search/${this.props.match.params.query}.json`;
+    */
     const pubresults_URL = `/pubs/search/${this.props.match.params.query}.json`;
 
-    {/* Setting the relevant data into state. */}
+    /*
+      Setting the relevant data into state.
+    */
     axios.get( pubresults_URL )
     .then(response => {
       // console.log("response", response.data);
@@ -56,7 +66,7 @@ class SearchResults extends Component{
   };
 
   handleBackClick(event){
-    {/* Back button event handler  */}
+    /* Back button event handler  */
     event.preventDefault();
     this.props.history.goBack()
   }
@@ -81,7 +91,9 @@ class SearchResults extends Component{
           </ul>
         }
         <h2>Map</h2>
-        {/* We send the pubs array data to the map container to set up our map configuration  */}
+        {/*
+          We send the pubs array data to the map container to set up our map configuration
+        */}
         <div className="map__box">
           {this.state.pubs.length > 0 && <MapContainer items={this.state.pubs} />}
         </div>

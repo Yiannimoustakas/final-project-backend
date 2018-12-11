@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 
-{/* This is the result of completing the order. Only rednering the div saying that order is successful. */}
+/* This is the result of completing the order. Only rednering the div saying that order is successful. */
 
 const OrderMade = ({order, price, orderID}) => (
   <div>

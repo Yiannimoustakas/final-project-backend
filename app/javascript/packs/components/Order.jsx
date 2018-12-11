@@ -3,7 +3,7 @@ import axios from 'axios';
 import {Link} from 'react-router-dom';
 import OrderMade from './OrderMade'
 
-{/* Simple Order component. User clicks on an item on the menu and it will be added to their order instantly. Data is being passed through from the ShowPub user event. */}
+/* Simple Order component. User clicks on an item on the menu and it will be added to their order instantly. Data is being passed through from the ShowPub user event. */
 
 class Order extends Component{
   render(){

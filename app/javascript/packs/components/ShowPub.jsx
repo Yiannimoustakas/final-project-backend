@@ -8,11 +8,17 @@ import Geocode from "react-geocode";
 // const ORDER_URL = 'http://localhost:3000/orders.json'
 const ORDER_URL = '/orders.json'
 
-{/* We're setting the pubs data into an object, we're adding the order into an array and price as an integer which is then passed to the order component.  */}
+/*
+  We're setting the pubs data into an object, we're adding the order into an array and price as an integer which is then passed to the order component.
+*/
 
-{/* OrderStatus is changed after the user successfully makes an order which will then render the orderMade component. */}
+/*
+  OrderStatus is changed after the user successfully makes an order which will then render the orderMade component.
+*/
 
-{/*  OrderID is set up so we can then post it to the backend and can create a new order in our database. */}
+/*
+  OrderID is set up so we can then post it to the backend and can create a new order in our database.
+*/
 
 class ShowPub extends Component {
   constructor(){
@@ -42,7 +48,9 @@ class ShowPub extends Component {
     });
   }
 
-  {/* Neat little trick i learned and thought it would be a fun way to keep the site a littel more interesting. utterThis() essetially utter's the order. If no order in state then utterThat() will be called. */}
+  /*
+    Neat little trick i learned and thought it would be a fun way to keep the site a littel more interesting. utterThis() essetially utter's the order. If no order in state then utterThat() will be called.
+  */
 
   utterThis = () => {
     const synth = window.speechSynthesis
@@ -66,7 +74,9 @@ class ShowPub extends Component {
 
     const drinkIDs = this.state.order.map(d => d.id)
 
-    {/* Posting the order to the backend db. */}
+    /*
+      Posting the order to the backend db.
+    */
     axios.post(ORDER_URL, {
       pub_id: this.state.pub.id,
       drink_ids: drinkIDs
@@ -78,7 +88,7 @@ class ShowPub extends Component {
     .catch(console.warn)
   }
 
-  {/* reset's state back to 0 */}
+  /* reset's state back to 0 */
 
   resetOrder = () => {
     this.setState({
@@ -92,10 +102,14 @@ class ShowPub extends Component {
     this.props.history.goBack()
   }
 
-  {/* Render's the correct pub as per response data from our axios request(pub_URL) */}
+  /*
+    Render's the correct pub as per response data from our axios request(pub_URL)
+  */
 
   showPub(id) {
-    {/*const pub_URL = `http://localhost:3000/pub/${id}.json`*/}
+    /*
+      const pub_URL = `http://localhost:3000/pub/${id}.json`
+    */
     const pub_URL = `/pub/${id}.json`
     axios.get(pub_URL)
     .then(response => {
@@ -106,7 +120,9 @@ class ShowPub extends Component {
   }
 
   render() {
-    {/* Checks that state is rendered. Will show us this div until it does. */}
+    {/*
+      Checks that state is rendered. Will show us this div until it does.
+    */}
     if (!this.state.pub.name){
       return <div>Loading...</div>
     }
