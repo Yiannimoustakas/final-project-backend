@@ -14,7 +14,7 @@
  *= require_self
  */
 
-/* .sign__in__message{
+.sign__in__message{
   left: 50%;
   top: 5vh;
   padding: 10px;
@@ -27,4 +27,4 @@
   box-shadow: rgba(0, 0, 0, 0.1) 0px 6px 6px 0px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 3px;
-} */
+}
