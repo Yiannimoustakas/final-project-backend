@@ -3,7 +3,7 @@
 My final project completed at GA was a free for all. One week to complete something uttely spectacular, utilising all of the skills learned over the course of 3 months. I decided I would do this using a Ruby on Rails backend that spoke to a React.js frontend, and make it a super cool single page app that everyone has been going crazy for. It's so hot right now.
 
 ## Link to live site
-<>
+<https://hey-brew.herokuapp.com/>
 
 ## Tech Used
 React.js
