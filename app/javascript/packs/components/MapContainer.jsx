@@ -1,3 +1,8 @@
+
+
+{/* This is the start of the google maps api process. We firstly set up the api key and url on the frontend. We import the MapConfig which is then sedning  */}
+
+
 import React, {Component} from 'react';
 import MapConfig from './MapConfig';
 

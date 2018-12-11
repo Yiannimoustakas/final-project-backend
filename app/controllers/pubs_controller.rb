@@ -16,6 +16,7 @@ class PubsController < ApplicationController
     render json: @pub, include: 'drinks'
   end
 
+  # ILIKE query is used here so it will find any matching partial queries lower or upper and will feed me the JSON response back 
   def search
     render json: Pub.where('name || location ILIKE ?', "%#{params[:query]}%")
   end

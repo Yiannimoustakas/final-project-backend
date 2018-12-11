@@ -3,6 +3,8 @@ import React, {Component} from 'react';
 import { withScriptjs, withGoogleMap, GoogleMap, Marker } from 'react-google-maps';
 import MapMarker from "./MapMarker";
 
+{/* Map Config now has the relevant data and we can set up the map on the page. Just as is shows on the react-google-maps api docs. */}
+
 const MapConfig = withScriptjs(withGoogleMap((props) =>{
 
   return (

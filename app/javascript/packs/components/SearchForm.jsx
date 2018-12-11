@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 import axios from 'axios';
 
+{/* SearchForm is the first page to the react site. We are doing a lot of setup here such as setting the users query event in state, adding the geolocation position, and  distance. */}
+
 class SearchForm extends Component{
 
   constructor(props){
@@ -50,7 +52,7 @@ class SearchForm extends Component{
   render(){
 
     let geolocationForm = '';
-
+    {/* This is an upcoming feature. Users will be able to search depending on how close they are to their relevant local bar or pub. */}
     if( this.state.geolocation ){
       geolocationForm = (
         <span>

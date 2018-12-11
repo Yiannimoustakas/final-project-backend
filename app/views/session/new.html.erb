@@ -1,3 +1,6 @@
+<%# This page is rendering both the sign up form and the login form on the same page. I have done it like this so I could have a cascading form that could instantly swtich between the two forms on the same page. %>
+<%# An annoying thing is that heroku is not recognising the css properties so the form is a little untidy. I am still trying to fix this issue. %>
+
 
 <% if flash[:error] %>
   <strong><%= flash[:error] %></strong>

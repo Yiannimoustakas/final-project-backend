@@ -2,6 +2,8 @@ class SessionController < ApplicationController
   def new
   end
 
+  # Session controller is authenticating the user and giving us a current_user in the process
+
   def create
     user = User.find_by email: params[:email]
     if user.present? && #user.authenticate( params[:password] )
